@@ -111,3 +111,105 @@ a {
 .nav-button:hover {
     background-color: var(--dark-green);
 }
+
+
+/* =====================================
+   HOMEPAGE HERO SECTION
+===================================== */
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+
+    padding: 100px max(40px, calc((100% - 1170px) / 2));
+
+    background:
+        linear-gradient(
+            110deg,
+            #F0F7F1 0%,
+            #FFFFFF 75%
+        );
+}
+
+
+/* Hero content */
+.hero-content {
+    max-width: 750px;
+}
+
+
+/* Small introductory label */
+.hero-label {
+    color: var(--primary-green);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+
+/* Main headline */
+.hero h1 {
+    font-size: clamp(48px, 6vw, 76px);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--primary-green);
+}
+
+
+/* Hero description */
+.hero-description {
+    max-width: 590px;
+    font-size: 17px;
+    color: var(--grey-text);
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+
+/* Hero buttons */
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+
+/* Primary button */
+.primary-button {
+    background-color: var(--primary-green);
+    color: var(--white);
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.primary-button:hover {
+    background-color: var(--dark-green);
+    transform: translateY(-2px);
+}
+
+
+/* Secondary button */
+.secondary-button {
+    color: var(--dark-green);
+    border: 1px solid #B8CCBE;
+    padding: 14px 25px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.secondary-button:hover {
+    background-color: var(--light-green);
+}
