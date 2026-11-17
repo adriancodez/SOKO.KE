@@ -213,3 +213,20 @@ a {
 .secondary-button:hover {
     background-color: var(--light-green);
 }
+
+
+/* =====================================
+   WEBSITE FOOTER
+===================================== */
+
+.footer {
+    background-color: var(--dark-green);
+    color: var(--white);
+    padding: 25px 40px;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 13px;
+    opacity: 0.85;
+}
