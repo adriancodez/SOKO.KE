@@ -1,29 +1,34 @@
 
-/* =====================================
-   SOKO.KE - MAIN STYLESHEET
-===================================== */
+/* ==========================================
+   SOKO.KE
+   Main Website Stylesheet
+========================================== */
 
-/* Website colour palette */
+
+/* 1. WEBSITE COLOUR PALETTE */
+
 :root {
     --primary-green: #087443;
     --dark-green: #064D30;
     --light-green: #EAF5EE;
+
     --white: #FFFFFF;
     --dark-text: #17251D;
     --grey-text: #66736B;
     --light-background: #F8FAF8;
+
+    --border-color: #E8EEE9;
 }
 
 
-/* Remove default browser spacing */
+/* 2. GENERAL WEBSITE STYLING */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-/* General website settings */
 html {
     scroll-behavior: smooth;
 }
@@ -35,19 +40,23 @@ body {
     line-height: 1.6;
 }
 
-
-/* Remove default link styling */
 a {
     text-decoration: none;
     color: inherit;
 }
 
+ul {
+    list-style: none;
+}
 
-/* Navigation bar */
+
+/* 3. NAVIGATION BAR */
+
 .header {
     width: 100%;
     background-color: var(--white);
-    border-bottom: 1px solid #E8EEE9;
+    border-bottom: 1px solid var(--border-color);
+
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -64,7 +73,8 @@ a {
 }
 
 
-/* Soko.ke logo */
+/* Website logo */
+
 .logo {
     font-size: 28px;
     font-weight: 700;
@@ -78,17 +88,18 @@ a {
 
 
 /* Navigation links */
+
 .nav-links {
     display: flex;
     align-items: center;
     gap: 30px;
-    list-style: none;
 }
 
 .nav-links a {
     font-size: 14px;
     font-weight: 500;
     color: var(--dark-text);
+
     transition: color 0.3s ease;
 }
 
@@ -98,13 +109,17 @@ a {
 
 
 /* Navigation button */
+
 .nav-button {
     background-color: var(--primary-green);
     color: var(--white);
+
     padding: 12px 22px;
     border-radius: 5px;
+
     font-size: 14px;
     font-weight: 600;
+
     transition: background-color 0.3s ease;
 }
 
@@ -113,48 +128,52 @@ a {
 }
 
 
-/* =====================================
-   HOMEPAGE HERO SECTION
-===================================== */
+/* 4. HOMEPAGE HERO SECTION */
 
 .hero {
     min-height: 650px;
+
     display: flex;
     align-items: center;
 
     padding: 100px max(40px, calc((100% - 1170px) / 2));
 
-    background:
-        linear-gradient(
-            110deg,
-            #F0F7F1 0%,
-            #FFFFFF 75%
-        );
+    background: linear-gradient(
+        110deg,
+        #F0F7F1 0%,
+        #FFFFFF 75%
+    );
 }
 
 
 /* Hero content */
+
 .hero-content {
     max-width: 750px;
 }
 
 
-/* Small introductory label */
+/* Introductory label */
+
 .hero-label {
     color: var(--primary-green);
+
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 3px;
+
     margin-bottom: 25px;
 }
 
 
 /* Main headline */
+
 .hero h1 {
     font-size: clamp(48px, 6vw, 76px);
     line-height: 1.1;
     font-weight: 700;
     letter-spacing: -3px;
+
     margin-bottom: 25px;
 }
 
@@ -164,16 +183,20 @@ a {
 
 
 /* Hero description */
+
 .hero-description {
     max-width: 590px;
+
     font-size: 17px;
     color: var(--grey-text);
     line-height: 1.9;
+
     margin-bottom: 35px;
 }
 
 
-/* Hero buttons */
+/* Hero buttons container */
+
 .hero-buttons {
     display: flex;
     align-items: center;
@@ -183,14 +206,18 @@ a {
 
 
 /* Primary button */
+
 .primary-button {
     background-color: var(--primary-green);
     color: var(--white);
+
     padding: 15px 25px;
     border-radius: 5px;
+
     font-size: 14px;
     font-weight: 600;
-    transition: 0.3s ease;
+
+    transition: all 0.3s ease;
 }
 
 .primary-button:hover {
@@ -200,14 +227,18 @@ a {
 
 
 /* Secondary button */
+
 .secondary-button {
     color: var(--dark-green);
     border: 1px solid #B8CCBE;
+
     padding: 14px 25px;
     border-radius: 5px;
+
     font-size: 14px;
     font-weight: 600;
-    transition: 0.3s ease;
+
+    transition: all 0.3s ease;
 }
 
 .secondary-button:hover {
@@ -215,13 +246,12 @@ a {
 }
 
 
-/* =====================================
-   WEBSITE FOOTER
-===================================== */
+/* 5. WEBSITE FOOTER */
 
 .footer {
     background-color: var(--dark-green);
     color: var(--white);
+
     padding: 25px 40px;
     text-align: center;
 }
@@ -232,9 +262,7 @@ a {
 }
 
 
-/* =====================================
-   MOBILE RESPONSIVENESS
-===================================== */
+/* 6. TABLET RESPONSIVENESS */
 
 @media (max-width: 900px) {
 
@@ -260,6 +288,8 @@ a {
     }
 }
 
+
+/* 7. MOBILE RESPONSIVENESS */
 
 @media (max-width: 600px) {
 
@@ -297,4 +327,12 @@ a {
     .footer {
         padding: 22px 15px;
     }
+}
+
+
+/* 8. ACCESSIBILITY AND INTERACTION */
+
+a:focus-visible {
+    outline: 3px solid var(--primary-green);
+    outline-offset: 4px;
 }
