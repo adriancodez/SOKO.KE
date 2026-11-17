@@ -1,27 +1,20 @@
 
-/* ==========================================
-   SOKO.KE
-   Main Website Stylesheet
-========================================== */
-
-
-/* 1. WEBSITE COLOUR PALETTE */
+/* ==============================
+   GENERAL STYLES
+============================== */
 
 :root {
     --primary-green: #087443;
     --dark-green: #064D30;
     --light-green: #EAF5EE;
 
-    --white: #FFFFFF;
     --dark-text: #17251D;
     --grey-text: #66736B;
-    --light-background: #F8FAF8;
 
-    --border-color: #E8EEE9;
+    --background: #F8FAF8;
+    --white: #FFFFFF;
+    --border: #E8EEE9;
 }
-
-
-/* 2. GENERAL WEBSITE STYLING */
 
 * {
     margin: 0;
@@ -31,13 +24,14 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
     font-family: 'DM Sans', sans-serif;
-    background-color: var(--white);
+    background: var(--background);
     color: var(--dark-text);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 a {
@@ -45,49 +39,54 @@ a {
     color: inherit;
 }
 
-ul {
-    list-style: none;
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section-label {
+    color: var(--primary-green);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
 }
 
 
-/* 3. NAVIGATION BAR */
+/* ==============================
+   HEADER
+============================== */
 
 .header {
-    width: 100%;
-    background-color: var(--white);
-    border-bottom: 1px solid var(--border-color);
-
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
 }
 
-.navbar {
-    max-width: 1250px;
-    margin: auto;
-    padding: 20px 40px;
-
+.nav-container {
+    min-height: 82px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-
-/* Website logo */
-
 .logo {
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: -1px;
-    color: var(--dark-green);
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    color: var(--dark-text);
 }
 
 .logo span {
     color: var(--primary-green);
 }
-
-
-/* Navigation links */
 
 .nav-links {
     display: flex;
@@ -96,10 +95,9 @@ ul {
 }
 
 .nav-links a {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--dark-text);
-
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--grey-text);
     transition: color 0.3s ease;
 }
 
@@ -107,73 +105,37 @@ ul {
     color: var(--primary-green);
 }
 
-
-/* Navigation button */
-
-.nav-button {
-    background-color: var(--primary-green);
+.nav-links .nav-button {
+    background: var(--primary-green);
     color: var(--white);
-
-    padding: 12px 22px;
+    padding: 11px 20px;
     border-radius: 5px;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    transition: background-color 0.3s ease;
 }
 
-.nav-button:hover {
-    background-color: var(--dark-green);
+.nav-links .nav-button:hover {
+    background: var(--dark-green);
 }
 
 
-/* 4. HOMEPAGE HERO SECTION */
+/* ==============================
+   HERO SECTION
+============================== */
 
 .hero {
-    min-height: 650px;
-
-    display: flex;
-    align-items: center;
-
-    padding: 100px max(40px, calc((100% - 1170px) / 2));
-
-    background: linear-gradient(
-        110deg,
-        #F0F7F1 0%,
-        #FFFFFF 75%
-    );
+    background: var(--light-green);
+    padding: 145px 0;
 }
-
-
-/* Hero content */
 
 .hero-content {
-    max-width: 750px;
+    max-width: 1150px;
 }
-
-
-/* Introductory label */
-
-.hero-label {
-    color: var(--primary-green);
-
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 3px;
-
-    margin-bottom: 25px;
-}
-
-
-/* Main headline */
 
 .hero h1 {
-    font-size: clamp(48px, 6vw, 76px);
-    line-height: 1.1;
-    font-weight: 700;
+    font-size: clamp(45px, 6vw, 76px);
+    line-height: 1.12;
     letter-spacing: -3px;
-
+    font-weight: 800;
+    max-width: 750px;
     margin-bottom: 25px;
 }
 
@@ -181,133 +143,391 @@ ul {
     color: var(--primary-green);
 }
 
-
-/* Hero description */
-
 .hero-description {
-    max-width: 590px;
-
-    font-size: 17px;
+    max-width: 560px;
     color: var(--grey-text);
-    line-height: 1.9;
-
+    font-size: 17px;
     margin-bottom: 35px;
 }
 
-
-/* Hero buttons container */
-
 .hero-buttons {
     display: flex;
-    align-items: center;
-    gap: 18px;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 
-/* Primary button */
+/* ==============================
+   BUTTONS
+============================== */
 
-.primary-button {
-    background-color: var(--primary-green);
-    color: var(--white);
-
-    padding: 15px 25px;
+.primary-button,
+.secondary-button,
+.light-button {
+    display: inline-block;
+    padding: 13px 23px;
     border-radius: 5px;
-
-    font-size: 14px;
-    font-weight: 600;
-
+    font-size: 13px;
+    font-weight: 700;
     transition: all 0.3s ease;
 }
 
+.primary-button {
+    background: var(--primary-green);
+    color: var(--white);
+}
+
 .primary-button:hover {
-    background-color: var(--dark-green);
+    background: var(--dark-green);
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    border: 1px solid var(--primary-green);
+    color: var(--primary-green);
+}
+
+.secondary-button:hover {
+    background: var(--white);
+}
+
+.light-button {
+    background: var(--white);
+    color: var(--dark-green);
+    margin-top: 20px;
+}
+
+.light-button:hover {
     transform: translateY(-2px);
 }
 
 
-/* Secondary button */
+/* ==============================
+   SECTION HEADINGS
+============================== */
 
-.secondary-button {
-    color: var(--dark-green);
-    border: 1px solid #B8CCBE;
+.section-heading {
+    max-width: 700px;
+    margin-bottom: 50px;
+}
 
-    padding: 14px 25px;
-    border-radius: 5px;
+.section-heading h2,
+.innovation-content h2,
+.contact-content h2 {
+    font-size: clamp(32px, 4vw, 45px);
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+}
 
+.section-heading > p:last-child {
+    color: var(--grey-text);
+    font-size: 16px;
+}
+
+
+/* ==============================
+   ABOUT SECTION
+============================== */
+
+.about-section {
+    background: var(--white);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.about-card {
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: var(--background);
+}
+
+.card-icon {
+    display: inline-block;
+    color: var(--primary-green);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.about-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.about-card p {
+    color: var(--grey-text);
     font-size: 14px;
-    font-weight: 600;
-
-    transition: all 0.3s ease;
-}
-
-.secondary-button:hover {
-    background-color: var(--light-green);
 }
 
 
-/* 5. WEBSITE FOOTER */
+/* ==============================
+   PRODUCTS SECTION
+============================== */
+
+.products-section {
+    background: var(--background);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: var(--white);
+    padding: 40px;
+    min-height: 280px;
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--primary-green);
+    border-radius: 6px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.product-number {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--grey-text);
+    margin-bottom: 25px;
+}
+
+.product-card h3 {
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: var(--grey-text);
+    margin-bottom: 25px;
+    max-width: 420px;
+}
+
+.product-link {
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: auto;
+    transition: opacity 0.3s ease;
+}
+
+.product-link:hover {
+    opacity: 0.7;
+}
+
+
+/* Individual Product Colours */
+
+.transit {
+    border-top-color: #252525;
+}
+
+.transit h3,
+.transit .product-link {
+    color: #252525;
+}
+
+.pay {
+    border-top-color: #087443;
+}
+
+.pay h3,
+.pay .product-link {
+    color: #087443;
+}
+
+.hub {
+    border-top-color: #2876B9;
+}
+
+.hub h3,
+.hub .product-link {
+    color: #2876B9;
+}
+
+.energy {
+    border-top-color: #D6A21D;
+}
+
+.energy h3,
+.energy .product-link {
+    color: #B4860C;
+}
+
+
+/* ==============================
+   INNOVATION SECTION
+============================== */
+
+.innovation-section {
+    background: var(--dark-green);
+    color: var(--white);
+}
+
+.innovation-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.innovation-section .section-label {
+    color: #A8D8BB;
+}
+
+.innovation-content h2 {
+    max-width: 450px;
+}
+
+.innovation-text p {
+    color: #D2E3D8;
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+
+/* ==============================
+   PARTNERSHIPS SECTION
+============================== */
+
+.partnerships-section {
+    background: var(--white);
+}
+
+
+/* ==============================
+   CONTACT SECTION
+============================== */
+
+.contact-section {
+    background: var(--light-green);
+}
+
+.contact-content {
+    text-align: center;
+    max-width: 700px;
+}
+
+.contact-content h2 {
+    margin-bottom: 20px;
+}
+
+.contact-content p:not(.section-label) {
+    color: var(--grey-text);
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
 
 .footer {
-    background-color: var(--dark-green);
+    background: #10291D;
     color: var(--white);
-
-    padding: 25px 40px;
-    text-align: center;
+    padding: 35px 0;
 }
 
-.footer p {
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    color: var(--white);
+}
+
+.footer-content p {
+    color: #B8C9BE;
     font-size: 13px;
-    opacity: 0.85;
+}
+
+.copyright {
+    font-size: 12px;
 }
 
 
-/* 6. TABLET RESPONSIVENESS */
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
 
 @media (max-width: 900px) {
 
-    .navbar {
-        padding: 18px 25px;
+    .nav-container {
+        padding: 18px 0;
+        flex-direction: column;
+        gap: 18px;
     }
 
     .nav-links {
-        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .hero {
+        padding: 110px 0;
+    }
+
+    .about-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .innovation-content {
+        gap: 35px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .nav-container {
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        justify-content: flex-start;
+        gap: 13px 18px;
     }
 
     .nav-links a {
         font-size: 12px;
     }
 
-    .nav-button {
-        display: none;
+    .nav-links .nav-button {
+        padding: 8px 13px;
     }
 
     .hero {
-        padding: 90px 30px;
-        min-height: 550px;
-    }
-}
-
-
-/* 7. MOBILE RESPONSIVENESS */
-
-@media (max-width: 600px) {
-
-    .navbar {
-        padding: 18px 20px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .hero {
-        min-height: 550px;
-        padding: 75px 25px;
+        padding: 90px 0;
     }
 
     .hero h1 {
-        font-size: 48px;
+        font-size: 46px;
         letter-spacing: -2px;
     }
 
@@ -316,23 +536,28 @@ ul {
     }
 
     .hero-buttons {
-        align-items: stretch;
         flex-direction: column;
+        align-items: flex-start;
     }
 
-    .hero-buttons a {
-        text-align: center;
+    .about-grid,
+    .products-grid,
+    .innovation-content {
+        grid-template-columns: 1fr;
     }
 
-    .footer {
-        padding: 22px 15px;
+    .product-card {
+        padding: 30px;
+        min-height: 260px;
     }
-}
 
+    .innovation-content {
+        gap: 20px;
+    }
 
-/* 8. ACCESSIBILITY AND INTERACTION */
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-a:focus-visible {
-    outline: 3px solid var(--primary-green);
-    outline-offset: 4px;
 }
