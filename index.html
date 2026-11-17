@@ -1,61 +1,50 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Soko.ke | Technology Built Around Kenya</title>
 
-    <meta name="description" content="Soko.ke is a Kenyan technology company developing innovative solutions in mobility, digital payments, marketplaces and energy.">
+    <meta name="description" content="Soko.ke is building technology solutions that connect people, simplify everyday experiences and create opportunities across Kenya.">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Main stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Website navigation -->
+    <!-- Header -->
     <header class="header">
-        <nav class="navbar">
+        <div class="container nav-container">
 
-            <a href="index.html" class="logo">
-                Soko<span>.ke</span>
-            </a>
+            <a href="#home" class="logo">soko<span>.ke</span></a>
 
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#products">Our Products</a></li>
-                <li><a href="#innovation">Innovation</a></li>
-                <li><a href="#partnerships">Partnerships</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#products">Our Products</a>
+                <a href="#innovation">Innovation</a>
+                <a href="#partnerships">Partnerships</a>
+                <a href="#contact" class="nav-button">Get in Touch</a>
+            </nav>
 
-            <a href="#contact" class="nav-button">
-                Get in Touch
-            </a>
-
-        </nav>
+        </div>
     </header>
 
 
-    <!-- Main homepage section -->
     <main>
 
+        <!-- Hero Section -->
         <section class="hero" id="home">
+            <div class="container hero-content">
 
-            <div class="hero-content">
-
-                <p class="hero-label">
-                    BUILT FOR KENYANS
-                </p>
+                <p class="section-label">BUILT FOR KENYANS</p>
 
                 <h1>
                     Technology built<br>
@@ -63,9 +52,9 @@
                 </h1>
 
                 <p class="hero-description">
-                    We are building innovative technology solutions
-                    designed to connect people, simplify everyday
-                    experiences and create opportunities across Kenya.
+                    We are building connected technology solutions that
+                    simplify everyday experiences, create opportunities
+                    and move Kenya forward.
                 </p>
 
                 <div class="hero-buttons">
@@ -79,18 +68,261 @@
                 </div>
 
             </div>
+        </section>
 
+
+        <!-- About Section -->
+        <section class="section about-section" id="about">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">WHO WE ARE</p>
+
+                    <h2>Building technology for everyday life.</h2>
+
+                    <p>
+                        Soko.ke is a Kenyan technology initiative focused
+                        on developing practical digital solutions for
+                        everyday needs. Through connected platforms, we
+                        aim to make essential services more accessible,
+                        convenient and efficient.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+
+                    <div class="about-card">
+                        <span class="card-icon">01</span>
+                        <h3>Our Vision</h3>
+                        <p>
+                            To contribute to a connected and innovative
+                            Kenya where technology creates opportunities
+                            for everyone.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <span class="card-icon">02</span>
+                        <h3>Our Mission</h3>
+                        <p>
+                            To develop accessible technology solutions
+                            that solve real problems and improve how
+                            people live, work and connect.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <span class="card-icon">03</span>
+                        <h3>Our Philosophy</h3>
+                        <p>
+                            People, Reimagination and Think Global,
+                            Live Local guide how we approach innovation
+                            and build our platforms.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Products Section -->
+        <section class="section products-section" id="products">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">OUR ECOSYSTEM</p>
+
+                    <h2>Four platforms. One connected vision.</h2>
+
+                    <p>
+                        Each Soko platform focuses on a different part
+                        of everyday life, working towards a more
+                        connected and convenient experience.
+                    </p>
+                </div>
+
+                <div class="products-grid">
+
+                    <!-- Soko Transit -->
+                    <div class="product-card transit">
+                        <span class="product-number">01 / MOBILITY</span>
+
+                        <h3>Soko Transit</h3>
+
+                        <p>
+                            Smarter mobility for a connected Kenya.
+                            Reimagining how people move and access
+                            transport services.
+                        </p>
+
+                        <a href="#" class="product-link">
+                            Explore Transit →
+                        </a>
+                    </div>
+
+
+                    <!-- Soko Pay -->
+                    <div class="product-card pay">
+                        <span class="product-number">02 / PAYMENTS</span>
+
+                        <h3>Soko Pay</h3>
+
+                        <p>
+                            Simpler transactions and greater convenience
+                            through accessible digital payment solutions.
+                        </p>
+
+                        <a href="#" class="product-link">
+                            Explore Pay →
+                        </a>
+                    </div>
+
+
+                    <!-- Soko Hub -->
+                    <div class="product-card hub">
+                        <span class="product-number">03 / MARKETPLACE</span>
+
+                        <h3>Soko Hub</h3>
+
+                        <p>
+                            Connecting buyers, sellers and communities
+                            through a modern street-commerce marketplace.
+                        </p>
+
+                        <a href="#" class="product-link">
+                            Explore Hub →
+                        </a>
+                    </div>
+
+
+                    <!-- Soko Energy -->
+                    <div class="product-card energy">
+                        <span class="product-number">04 / ENERGY</span>
+
+                        <h3>Soko Energy</h3>
+
+                        <p>
+                            Reimagining energy for a brighter Kenya
+                            through electric mobility and innovative
+                            energy solutions.
+                        </p>
+
+                        <a href="#" class="product-link">
+                            Explore Energy →
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Innovation Section -->
+        <section class="section innovation-section" id="innovation">
+            <div class="container innovation-content">
+
+                <div>
+                    <p class="section-label">THINKING AHEAD</p>
+
+                    <h2>Innovation with purpose.</h2>
+                </div>
+
+                <div class="innovation-text">
+                    <p>
+                        We believe technology should do more than
+                        introduce something new. It should make a
+                        meaningful difference in people's lives.
+                    </p>
+
+                    <p>
+                        Our approach is centred on understanding local
+                        needs, reimagining existing experiences and
+                        developing solutions with the potential to
+                        grow beyond borders.
+                    </p>
+
+                    <a href="#contact" class="light-button">
+                        Let's Build Together →
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Partnerships Section -->
+        <section class="section partnerships-section" id="partnerships">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">WORK WITH US</p>
+
+                    <h2>Growing through partnerships.</h2>
+
+                    <p>
+                        We believe meaningful progress happens when
+                        people and organisations work together.
+                        We welcome opportunities to collaborate with
+                        businesses, innovators and partners who share
+                        our vision.
+                    </p>
+                </div>
+
+                <a href="#contact" class="primary-button">
+                    Explore Partnerships →
+                </a>
+
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section class="section contact-section" id="contact">
+            <div class="container contact-content">
+
+                <p class="section-label">GET IN TOUCH</p>
+
+                <h2>Have an idea? Let's talk.</h2>
+
+                <p>
+                    Whether you are interested in our platforms,
+                    exploring a partnership or simply want to learn
+                    more about Soko.ke, we would love to hear from you.
+                </p>
+
+                <a href="mailto:" class="primary-button">
+                    Contact Soko.ke →
+                </a>
+
+            </div>
         </section>
 
     </main>
 
 
-    <!-- Website footer -->
+    <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 Soko.ke. All rights reserved.</p>
+        <div class="container footer-content">
+
+            <a href="#home" class="logo footer-logo">
+                soko<span>.ke</span>
+            </a>
+
+            <p>
+                Building technology around Kenya.
+            </p>
+
+            <p class="copyright">
+                © 2026 Soko.ke. All rights reserved.
+            </p>
+
+        </div>
     </footer>
 
-    <!-- JavaScript file -->
+
     <script src="script.js"></script>
 
 </body>
