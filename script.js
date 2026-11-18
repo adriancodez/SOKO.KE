@@ -1,45 +1,116 @@
 
-// ================================
-// SOKO.KE - MAIN JAVASCRIPT
-// ================================
+// =========================================
+// SOKO.KE
+// MAIN WEBSITE JAVASCRIPT
+// =========================================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // MOBILE NAVIGATION
+
+    const menuButton = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector(".nav-links");
+    const navigationLinks = document.querySelectorAll(".nav-links a");
+
+    // Open and close the mobile menu
+    if (menuButton && navigation) {
+
+        menuButton.addEventListener("click", () => {
+
+            const isOpen = navigation.classList.toggle("active");
+
+            menuButton.setAttribute("aria-expanded", isOpen);
+
+        });
 
 
-// Mobile navigation menu
+        // Close the menu after selecting a navigation link
+        navigationLinks.forEach((link) => {
 
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+            link.addEventListener("click", () => {
 
+                navigation.classList.remove("active");
 
-// Open and close the menu when clicked
+                menuButton.setAttribute("aria-expanded", "false");
 
-if (menuToggle && navLinks) {
+            });
 
-    menuToggle.addEventListener("click", function () {
-
-        navLinks.classList.toggle("active");
-
-        // Update accessibility status
-        const isOpen = navLinks.classList.contains("active");
-
-        menuToggle.setAttribute("aria-expanded", isOpen);
-
-    });
+        });
 
 
-    // Close the menu after clicking a navigation link
+        // Close the menu when clicking outside it
+        document.addEventListener("click", (event) => {
 
-    const navigationItems = navLinks.querySelectorAll("a");
+            const clickedInsideMenu = navigation.contains(event.target);
+            const clickedMenuButton = menuButton.contains(event.target);
 
-    navigationItems.forEach(function (link) {
+            if (!clickedInsideMenu && !clickedMenuButton) {
 
-        link.addEventListener("click", function () {
+                navigation.classList.remove("active");
 
-            navLinks.classList.remove("active");
+                menuButton.setAttribute("aria-expanded", "false");
 
-            menuToggle.setAttribute("aria-expanded", "false");
+            }
+
+        });
+
+
+        // Close the menu using the Escape key
+        document.addEventListener("keydown", (event) => {
+
+            if (event.key === "Escape") {
+
+                navigation.classList.remove("active");
+
+                menuButton.setAttribute("aria-expanded", "false");
+
+            }
+
+        });
+
+    }
+
+
+    // AUTOMATIC FOOTER YEAR
+
+    const yearElement = document.querySelector(".current-year");
+
+    if (yearElement) {
+
+        yearElement.textContent = new Date().getFullYear();
+
+    }
+
+
+    // SMOOTH SCROLLING FOR HOMEPAGE LINKS
+
+    const pageLinks = document.querySelectorAll('a[href^="#"]');
+
+    pageLinks.forEach((link) => {
+
+        link.addEventListener("click", (event) => {
+
+            const targetId = link.getAttribute("href");
+
+            if (!targetId || targetId === "#") {
+                return;
+            }
+
+            const targetSection = document.querySelector(targetId);
+
+            if (targetSection) {
+
+                event.preventDefault();
+
+                targetSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }
 
         });
 
     });
 
-}
+});

@@ -6,778 +6,492 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Soko.ke | Built for Kenyans</title>
+    <title>SOKO.KE | Technology Built Around Kenya</title>
 
-    <meta name="description" content="Soko.ke is a Kenyan technology initiative bringing together innovative solutions in transport, digital payments, marketplaces and energy.">
+    <meta name="description" content="SOKO.KE brings together innovative digital solutions in mobility, payments, marketplaces and energy, built around Kenya.">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-
-    <!-- ==============================
-         HEADER
-    ============================== -->
-
+    <!-- HEADER -->
     <header class="header">
-
         <div class="container nav-container">
 
-            <!-- Main Company Logo -->
-            <a href="index.html" class="logo">
-
-                <img
-                    src="images/soko-logo.jpg"
-                    alt="Soko.ke Logo"
-                >
-
+            <a href="#home" class="logo">
+                <img src="images/soko-logo.jpg" alt="SOKO.KE logo">
+                <span>SOKO.KE</span>
             </a>
 
-
-            <!-- Mobile Menu Button -->
             <button
                 class="menu-toggle"
                 aria-label="Toggle navigation"
                 aria-expanded="false"
+                aria-controls="nav-links"
             >
-
                 <span></span>
                 <span></span>
                 <span></span>
-
             </button>
 
-
-            <!-- Navigation Links -->
-            <nav class="nav-links">
-
-                <a href="index.html">Home</a>
-
+            <nav class="nav-links" id="nav-links">
+                <a href="#home">Home</a>
                 <a href="#about">About Us</a>
-
                 <a href="#products">Our Products</a>
-
                 <a href="#innovation">Innovation</a>
-
                 <a href="#partnerships">Partnerships</a>
-
-                <a href="#contact" class="nav-button">
-                    Get in Touch
-                </a>
-
+                <a href="#contact" class="nav-button">Get in Touch</a>
             </nav>
 
         </div>
-
     </header>
-
 
 
     <main>
 
-
-        <!-- ==============================
-             HERO / COVER SECTION
-        ============================== -->
-
+        <!-- HERO SECTION -->
         <section class="hero" id="home">
 
             <div class="hero-overlay"></div>
 
-            <div class="container hero-content">
+            <div class="container hero-container">
 
-                <p class="section-label">
-                    BUILT FOR KENYANS
-                </p>
+                <div class="hero-layout">
+
+                    <!-- HERO INTRODUCTION -->
+                    <div class="hero-content">
+
+                        <p class="section-label">
+                            <span class="status-dot"></span>
+                            BUILT FOR KENYANS
+                        </p>
+
+                        <h1>
+                            Technology built
+                            around <span>Kenya.</span>
+                        </h1>
+
+                        <p class="hero-description">
+                            SOKO.KE brings together innovative digital
+                            solutions designed to simplify everyday life,
+                            create opportunities and connect communities
+                            across Kenya.
+                        </p>
+
+                        <div class="hero-buttons">
+                            <a href="#products" class="primary-button">
+                                Explore Our Products <span>→</span>
+                            </a>
+
+                            <a href="#about" class="secondary-button">
+                                Discover SOKO.KE
+                            </a>
+                        </div>
+
+                        <div class="hero-note">
+                            <span class="hero-note-line"></span>
+                            TECHNOLOGY. PEOPLE. KENYA.
+                        </div>
+
+                    </div>
 
 
-                <h1>
+                    <!-- SOKO ECOSYSTEM PANEL -->
+                    <div class="ecosystem-panel">
 
-                    Technology built
-                    around <span>Kenya.</span>
+                        <div class="ecosystem-heading">
+                            <div>
+                                <span class="ecosystem-label">
+                                    THE SOKO ECOSYSTEM
+                                </span>
 
-                </h1>
+                                <h2>One vision. Four solutions.</h2>
+                            </div>
 
-
-                <p class="hero-description">
-
-                    Soko.ke is bringing together innovative
-                    digital solutions designed to simplify
-                    everyday life, create opportunities and
-                    connect communities across Kenya.
-
-                </p>
+                            <span class="ecosystem-indicator"></span>
+                        </div>
 
 
-                <div class="hero-buttons">
+                        <a href="products/transit.html" class="ecosystem-item">
+                            <img src="images/soko-transit-logo.jpg" alt="Soko Transit logo">
 
-                    <a href="#products" class="primary-button">
+                            <div class="ecosystem-item-text">
+                                <h3>Soko Transit</h3>
+                                <p>Smarter mobility</p>
+                            </div>
 
-                        Explore Our Products →
+                            <span class="ecosystem-arrow">↗</span>
+                        </a>
 
-                    </a>
+
+                        <a href="products/pay.html" class="ecosystem-item">
+                            <img src="images/soko-pay-logo.jpg" alt="Soko Pay logo">
+
+                            <div class="ecosystem-item-text">
+                                <h3>Soko Pay</h3>
+                                <p>Digital payments</p>
+                            </div>
+
+                            <span class="ecosystem-arrow">↗</span>
+                        </a>
 
 
-                    <a href="#about" class="secondary-button">
+                        <a href="products/hub.html" class="ecosystem-item">
+                            <img src="images/soko-hub-logo.jpg" alt="Soko Hub logo">
 
-                        Discover Soko.ke
+                            <div class="ecosystem-item-text">
+                                <h3>Soko Hub</h3>
+                                <p>Connected marketplace</p>
+                            </div>
 
-                    </a>
+                            <span class="ecosystem-arrow">↗</span>
+                        </a>
 
+
+                        <a href="products/energy.html" class="ecosystem-item">
+                            <img src="images/soko-energy-logo.jpg" alt="Soko Energy logo">
+
+                            <div class="ecosystem-item-text">
+                                <h3>Soko Energy</h3>
+                                <p>Smarter energy solutions</p>
+                            </div>
+
+                            <span class="ecosystem-arrow">↗</span>
+                        </a>
+
+
+                        <div class="ecosystem-footer">
+                            <span>CONNECTED BY INNOVATION</span>
+                            <span>KENYA <span class="kenya-star">✳</span></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HERO KEYWORD STRIP -->
+                <div class="hero-bottom-strip">
+                    <span>PEOPLE FIRST</span>
+                    <span class="strip-dot"></span>
+                    <span>LOCAL INNOVATION</span>
+                    <span class="strip-dot"></span>
+                    <span>DIGITAL SOLUTIONS</span>
+                    <span class="strip-dot"></span>
+                    <span>GLOBAL THINKING</span>
                 </div>
 
             </div>
-
         </section>
 
 
-
-        <!-- ==============================
-             ABOUT SOKO.KE
-        ============================== -->
-
+        <!-- ABOUT SECTION -->
         <section class="section about-section" id="about">
-
             <div class="container">
 
-
                 <div class="section-heading">
+                    <p class="section-label">WHO WE ARE</p>
 
-                    <p class="section-label">
-                        WHO WE ARE
-                    </p>
-
-
-                    <h2>
-
-                        Building technology
-                        for everyday life.
-
-                    </h2>
-
+                    <h2>Building technology for everyday life.</h2>
 
                     <p>
-
-                        Soko.ke is a Kenyan technology initiative
-                        focused on developing practical digital
-                        solutions for everyday needs.
-
-                        Through our connected platforms, we aim
-                        to make essential services more accessible,
+                        SOKO.KE is a Kenyan technology initiative focused
+                        on developing practical digital solutions for
+                        everyday needs. Through our connected platforms,
+                        we aim to make essential services more accessible,
                         convenient and efficient.
-
                     </p>
-
                 </div>
-
 
 
                 <div class="about-grid">
 
+                    <article class="about-card">
+                        <span class="card-icon">01</span>
 
-                    <!-- Vision -->
-
-                    <div class="about-card">
-
-                        <span class="card-icon">
-                            01
-                        </span>
-
-
-                        <h3>
-                            Our Vision
-                        </h3>
-
+                        <h3>Our Vision</h3>
 
                         <p>
-
-                            To contribute to a connected and
-                            innovative Kenya where technology
-                            creates opportunities for everyone.
-
+                            To contribute to a connected and innovative
+                            Kenya where technology creates opportunities
+                            for everyone.
                         </p>
-
-                    </div>
-
+                    </article>
 
 
-                    <!-- Mission -->
+                    <article class="about-card">
+                        <span class="card-icon">02</span>
 
-                    <div class="about-card">
-
-                        <span class="card-icon">
-                            02
-                        </span>
-
-
-                        <h3>
-                            Our Mission
-                        </h3>
-
+                        <h3>Our Mission</h3>
 
                         <p>
-
-                            To develop accessible technology
-                            solutions that solve real problems
-                            and improve everyday experiences.
-
+                            To develop accessible technology solutions
+                            that solve real problems and improve everyday
+                            experiences.
                         </p>
-
-                    </div>
-
+                    </article>
 
 
-                    <!-- Philosophy -->
+                    <article class="about-card">
+                        <span class="card-icon">03</span>
 
-                    <div class="about-card">
-
-                        <span class="card-icon">
-                            03
-                        </span>
-
-
-                        <h3>
-                            Our Philosophy
-                        </h3>
-
+                        <h3>Our Philosophy</h3>
 
                         <p>
-
                             People, Reimagination and Think Global,
-                            Live Local guide how we approach
-                            innovation and develop our platforms.
-
+                            Live Local guide how we approach innovation
+                            and develop our platforms.
                         </p>
-
-                    </div>
-
+                    </article>
 
                 </div>
 
             </div>
-
         </section>
 
 
-
-
-        <!-- ==============================
-             PRODUCTS SECTION
-        ============================== -->
-
+        <!-- PRODUCTS SECTION -->
         <section class="section products-section" id="products">
-
             <div class="container">
 
+                <div class="section-heading centered-heading">
+                    <p class="section-label">OUR ECOSYSTEM</p>
 
-                <div class="section-heading">
-
-                    <p class="section-label">
-                        OUR ECOSYSTEM
-                    </p>
-
-
-                    <h2>
-
-                        Four platforms.
-                        One connected vision.
-
-                    </h2>
-
+                    <h2>Four platforms. One connected vision.</h2>
 
                     <p>
-
-                        Each Soko platform focuses on a different
-                        part of everyday life, working towards
-                        a more connected and convenient experience.
-
+                        Each SOKO platform focuses on a different part
+                        of everyday life, working towards a more
+                        connected and convenient experience.
                     </p>
-
                 </div>
-
 
 
                 <div class="products-grid">
 
-
-
-                    <!-- ==================
-                         SOKO TRANSIT
-                    ================== -->
-
+                    <!-- SOKO TRANSIT -->
                     <article class="product-card transit">
-
-
                         <div class="product-card-top">
-
                             <img
                                 src="images/soko-transit-logo.jpg"
-                                alt="Soko Transit Logo"
+                                alt="Soko Transit logo"
                                 class="product-logo"
                             >
 
-
-                            <div>
-
-                                <span class="product-number">
-                                    01 / MOBILITY
-                                </span>
-
-
-                                <h3>
-                                    Soko Transit
-                                </h3>
-
-                            </div>
-
+                            <span class="product-number">01 / MOBILITY</span>
                         </div>
 
-
+                        <h3>Soko Transit</h3>
 
                         <p>
-
                             Smarter mobility for a connected Kenya.
                             Reimagining how people move and access
                             transport services.
-
                         </p>
 
-
-
-                        <a
-                            href="products/transit.html"
-                            class="product-link"
-                        >
-
-                            Explore Soko Transit →
-
+                        <a href="products/transit.html" class="product-link">
+                            Explore Soko Transit <span>→</span>
                         </a>
-
-
                     </article>
 
 
-
-
-                    <!-- ==================
-                         SOKO PAY
-                    ================== -->
-
+                    <!-- SOKO PAY -->
                     <article class="product-card pay">
-
-
                         <div class="product-card-top">
-
                             <img
                                 src="images/soko-pay-logo.jpg"
-                                alt="Soko Pay Logo"
+                                alt="Soko Pay logo"
                                 class="product-logo"
                             >
 
-
-                            <div>
-
-                                <span class="product-number">
-                                    02 / PAYMENTS
-                                </span>
-
-
-                                <h3>
-                                    Soko Pay
-                                </h3>
-
-                            </div>
-
+                            <span class="product-number">02 / PAYMENTS</span>
                         </div>
 
-
+                        <h3>Soko Pay</h3>
 
                         <p>
-
-                            Simpler transactions and greater
-                            convenience through accessible
-                            digital payment solutions.
-
+                            Simpler transactions and greater convenience
+                            through accessible digital payment solutions.
                         </p>
 
-
-
-                        <a
-                            href="products/pay.html"
-                            class="product-link"
-                        >
-
-                            Explore Soko Pay →
-
+                        <a href="products/pay.html" class="product-link">
+                            Explore Soko Pay <span>→</span>
                         </a>
-
-
                     </article>
 
 
-
-
-                    <!-- ==================
-                         SOKO HUB
-                    ================== -->
-
+                    <!-- SOKO HUB -->
                     <article class="product-card hub">
-
-
                         <div class="product-card-top">
-
                             <img
                                 src="images/soko-hub-logo.jpg"
-                                alt="Soko Hub Logo"
+                                alt="Soko Hub logo"
                                 class="product-logo"
                             >
 
-
-                            <div>
-
-                                <span class="product-number">
-                                    03 / MARKETPLACE
-                                </span>
-
-
-                                <h3>
-                                    Soko Hub
-                                </h3>
-
-                            </div>
-
+                            <span class="product-number">03 / MARKETPLACE</span>
                         </div>
 
-
+                        <h3>Soko Hub</h3>
 
                         <p>
-
-                            Connecting buyers, sellers and
-                            communities through a modern
-                            marketplace.
-
+                            Connecting buyers, sellers and communities
+                            through a modern marketplace.
                         </p>
 
-
-
-                        <a
-                            href="products/hub.html"
-                            class="product-link"
-                        >
-
-                            Explore Soko Hub →
-
+                        <a href="products/hub.html" class="product-link">
+                            Explore Soko Hub <span>→</span>
                         </a>
-
-
                     </article>
 
 
-
-
-                    <!-- ==================
-                         SOKO ENERGY
-                    ================== -->
-
+                    <!-- SOKO ENERGY -->
                     <article class="product-card energy">
-
-
                         <div class="product-card-top">
-
                             <img
                                 src="images/soko-energy-logo.jpg"
-                                alt="Soko Energy Logo"
+                                alt="Soko Energy logo"
                                 class="product-logo"
                             >
 
-
-                            <div>
-
-                                <span class="product-number">
-                                    04 / ENERGY
-                                </span>
-
-
-                                <h3>
-                                    Soko Energy
-                                </h3>
-
-                            </div>
-
+                            <span class="product-number">04 / ENERGY</span>
                         </div>
 
-
+                        <h3>Soko Energy</h3>
 
                         <p>
-
-                            Cleaner, greener and smarter energy
-                            solutions, including electric mobility
-                            and innovative energy services.
-
+                            Cleaner, greener and smarter energy solutions,
+                            including electric mobility and innovative
+                            energy services.
                         </p>
 
-
-
-                        <a
-                            href="products/energy.html"
-                            class="product-link"
-                        >
-
-                            Explore Soko Energy →
-
+                        <a href="products/energy.html" class="product-link">
+                            Explore Soko Energy <span>→</span>
                         </a>
-
-
                     </article>
 
-
-
                 </div>
 
             </div>
-
         </section>
 
 
-
-
-        <!-- ==============================
-             INNOVATION SECTION
-        ============================== -->
-
+        <!-- INNOVATION SECTION -->
         <section class="section innovation-section" id="innovation">
-
             <div class="container innovation-content">
 
+                <div class="innovation-heading">
+                    <p class="section-label">THINKING AHEAD</p>
 
-                <div>
-
-                    <p class="section-label">
-                        THINKING AHEAD
-                    </p>
-
-
-                    <h2>
-
-                        Innovation
-                        with purpose.
-
-                    </h2>
-
+                    <h2>Innovation with purpose.</h2>
                 </div>
-
-
 
                 <div class="innovation-text">
-
-
                     <p>
-
-                        We believe technology should do more
-                        than introduce something new.
-
-                        It should make a meaningful difference
-                        in people's lives.
-
+                        We believe technology should do more than
+                        introduce something new. It should make a
+                        meaningful difference in people's lives.
                     </p>
 
-
-
                     <p>
-
-                        Our approach is centred on understanding
-                        local needs, reimagining existing
-                        experiences and developing solutions
-                        with the potential to grow beyond borders.
-
+                        Our approach is centred on understanding local
+                        needs, reimagining existing experiences and
+                        developing solutions with the potential to
+                        grow beyond borders.
                     </p>
-
-
 
                     <a href="#contact" class="light-button">
-
-                        Let's Build Together →
-
+                        Let's Build Together <span>→</span>
                     </a>
-
-
                 </div>
 
-
             </div>
-
         </section>
 
 
-
-
-        <!-- ==============================
-             PARTNERSHIPS SECTION
-        ============================== -->
-
+        <!-- PARTNERSHIPS SECTION -->
         <section class="section partnerships-section" id="partnerships">
-
             <div class="container">
 
-
                 <div class="section-heading">
+                    <p class="section-label">WORK WITH US</p>
 
-
-                    <p class="section-label">
-                        WORK WITH US
-                    </p>
-
-
-
-                    <h2>
-
-                        Growing through partnerships.
-
-                    </h2>
-
-
+                    <h2>Growing through partnerships.</h2>
 
                     <p>
-
-                        We believe meaningful progress happens
-                        when people and organisations work
-                        together.
-
-                        We welcome opportunities to collaborate
-                        with businesses, innovators and partners
-                        who share our vision.
-
+                        We believe meaningful progress happens when
+                        people and organisations work together.
+                        We welcome opportunities to collaborate with
+                        businesses, innovators and partners who share
+                        our vision.
                     </p>
-
-
                 </div>
 
-
-
                 <a href="#contact" class="primary-button">
-
-                    Explore Partnerships →
-
+                    Explore Partnerships <span>→</span>
                 </a>
 
-
             </div>
-
         </section>
 
 
-
-
-        <!-- ==============================
-             CONTACT SECTION
-        ============================== -->
-
+        <!-- CONTACT SECTION -->
         <section class="section contact-section" id="contact">
-
             <div class="container contact-content">
 
+                <p class="section-label">GET IN TOUCH</p>
 
-                <p class="section-label">
-                    GET IN TOUCH
-                </p>
-
-
-
-                <h2>
-
-                    Have an idea?
-                    Let's talk.
-
-                </h2>
-
-
+                <h2>Have an idea? Let's talk.</h2>
 
                 <p>
-
                     Whether you are interested in our platforms,
-                    exploring a partnership or simply want to
-                    learn more about Soko.ke, we would love
-                    to hear from you.
-
+                    exploring a partnership or simply want to learn
+                    more about SOKO.KE, we would love to hear from you.
                 </p>
 
-
-
-                <a
-                    href="mailto:YOUR-EMAIL@example.com"
-                    class="primary-button"
-                >
-
-                    Contact Soko.ke →
-
+                <!-- Replace this email address with the official one -->
+                <a href="mailto:YOUR-EMAIL@example.com" class="primary-button">
+                    Contact SOKO.KE <span>→</span>
                 </a>
 
-
             </div>
-
         </section>
-
 
     </main>
 
 
-
-
-    <!-- ==============================
-         FOOTER
-    ============================== -->
-
+    <!-- FOOTER -->
     <footer class="footer">
-
         <div class="container footer-content">
 
+            <div class="footer-brand">
+                <a href="#home" class="footer-logo">SOKO.KE</a>
+                <p>Building technology around Kenya.</p>
+            </div>
 
-            <a href="index.html" class="footer-logo">
-
-                <img
-                    src="images/soko-logo.jpg"
-                    alt="Soko.ke Logo"
-                >
-
-            </a>
-
-
-
-            <p>
-
-                Building technology around Kenya.
-
-            </p>
-
-
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#products">Products</a>
+                <a href="#contact">Contact</a>
+            </div>
 
             <p class="copyright">
-
-                © 2026 Soko.ke. All rights reserved.
-
+                © <span class="current-year">2026</span> SOKO.KE.
+                All rights reserved.
             </p>
 
-
         </div>
-
     </footer>
 
 
-
-
-    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 
-
 </body>
-
 </html>
