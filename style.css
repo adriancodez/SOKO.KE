@@ -624,3 +624,202 @@ button {
         width: 125px;
     }
 }
+
+
+/* =================================
+   PRODUCT PAGES
+================================= */
+
+.product-hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--dark-green);
+    color: var(--white);
+}
+
+.transit-hero {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(4, 39, 24, 0.92),
+            rgba(4, 39, 24, 0.45)
+        ),
+        url("../images/covers/transit-cover.jpg");
+}
+
+.product-hero-content {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    max-width: 1200px;
+}
+
+.product-hero h1 {
+    max-width: 750px;
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin: 20px 0;
+}
+
+.product-hero h1 span {
+    color: #9de0b5;
+}
+
+.product-hero .product-number {
+    color: #b8e4c8;
+    letter-spacing: 2px;
+}
+
+.product-hero-description {
+    max-width: 600px;
+    font-size: 17px;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 30px;
+}
+
+
+/* PRODUCT INTRO */
+
+.product-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.product-intro .section-heading {
+    margin-bottom: 0;
+}
+
+.product-intro-text p {
+    color: var(--text-grey);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+/* PRODUCT FOCUS */
+
+.product-focus-section {
+    background: #f7faf8;
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.focus-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px;
+    transition: 0.3s ease;
+}
+
+.focus-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
+
+.focus-card .card-icon {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.focus-card h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.focus-card p {
+    color: var(--text-grey);
+    font-size: 14px;
+}
+
+
+/* PRODUCT VISION */
+
+.product-vision-section {
+    background: var(--dark-green);
+    color: var(--white);
+}
+
+.product-vision-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.product-vision-content h2 {
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.15;
+    max-width: 500px;
+}
+
+.product-vision-text p {
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 22px;
+}
+
+.product-vision-section .section-label {
+    color: #a9dfbb;
+}
+
+.product-vision-section .light-button {
+    margin-top: 12px;
+}
+
+
+/* RESPONSIVE PRODUCT PAGES */
+
+@media (max-width: 900px) {
+
+    .focus-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-intro,
+    .product-vision-content {
+        gap: 35px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .product-hero {
+        min-height: 500px;
+    }
+
+    .product-hero-content {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .product-hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .product-intro,
+    .product-vision-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .focus-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .focus-card {
+        padding: 25px;
+    }
+
+}
